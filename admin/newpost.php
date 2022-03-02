@@ -15,7 +15,7 @@ if (!empty($_POST['submitted'])) {
     $content = trim(strip_tags($_POST['content']));
     $status = trim(strip_tags($_POST['status']));
     $user_id = trim(strip_tags($_SESSION['user']['id']));
-    $image = trim(strip_tags($_FILES['image']['name']));
+    // $image = trim(strip_tags($_FILES['image']['name']));
 
     // Validation 
     $errors = validText($errors, $title, 'title', 3, 50);
@@ -48,8 +48,8 @@ if (!empty($_POST['submitted'])) {
     }
     if (count($errors) === 0) {
 
-        $sql = "INSERT INTO blog_articles (title, content, user_id, created_at, status, )
-                VALUES (:title, :content, :user_id, NOW(), :status, )";
+        $sql = "INSERT INTO blog_articles (title, content, user_id, created_at, status )
+                VALUES (:title, :content, :user_id, NOW(), :status )";
 
         $query = $pdo->prepare($sql);
         $query->bindValue(':title', $title, PDO::PARAM_STR);
