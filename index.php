@@ -13,7 +13,6 @@ $sql = "SELECT b_a.id, b_a.title, b_a.created_at, b_u.pseudo
 $query = $pdo->prepare($sql);
 $query->execute();
 $blog_articles = $query->fetchAll();
-
 include('inc/header.php'); ?>
 <section id="titre">
     <div class="wrap" id="title">
