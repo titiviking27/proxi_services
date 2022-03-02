@@ -18,7 +18,7 @@
             <h1>Proxi Service</h1>
         </div>
         <div class="content">
-            <img src="./asset/img/titi-co.png" alt="">
+            <img src="./asset/img/proxi.gif" alt="">
         </div>
         <nav>
             <ul>
