@@ -55,7 +55,7 @@ if(!empty($_POST['submitted'])) {
         
         $hashpassword = password_hash($password, PASSWORD_DEFAULT);
         $token = generateRandomString(70);
-        $sql = "INSERT INTO blog_users (pseudo, email, password, created_at, role, token) VALUES (:pseudo, :mail, :password, :token, NOW(), 'abonne')";
+        $sql = "INSERT INTO blog_users (pseudo, email, password, created_at, role, token) VALUES (:pseudo, :mail, :password, NOW(), 'abonne', :token)";
   
         $query = $pdo->prepare($sql);
         $query->bindValue(':pseudo', $pseudo, PDO::PARAM_STR);

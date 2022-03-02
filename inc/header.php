@@ -17,10 +17,16 @@
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
                 <ul id="nav" class="navbar-nav ml-auto">
                     <li class="nav-item active"><a href="index.php" class="nav-link text-uppercase font-weight-bold">Home</a></li>
-                    <li class="nav-item"><a href="logout.php" class="nav-link text-uppercase font-weight-bold">Déconnexion</a></li>
-                    <li class="nav-item"><a href="admin/index.php" class="nav-link text-uppercase font-weight-bold">Admin</a></li>
+                    <?php 
+                    if(isLogged()) { ?>
+                        <li class="nav-item"><a href="logout.php" class="nav-link text-uppercase font-weight-bold">Déconnexion</a></li>                        
+                    <?php
+                    } else { ?>
                     <li class="nav-item"><a href="register.php" class="nav-link text-uppercase font-weight-bold">Inscription</a></li>
                     <li class="nav-item"><a href="login.php" class="nav-link text-uppercase font-weight-bold">Connexion</a></li>
+                    <?php
+                    }?> 
+                    <li class="nav-item"><a href="admin/index.php" class="nav-link text-uppercase font-weight-bold">Admin</a></li>
                 </ul>
             </div>
         </div>
@@ -32,21 +38,6 @@
         </div>
         <div class="content">
             <img src="./asset/img/proxi.gif" alt="">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <?php 
-                if(isLogged()) { ?>
-                    <li><a href="logout.php">Déconnexion</a></li>
-                <?php
-                } else { ?>
-                <li><a href="login.php">Connexion</a></li>
-                <li><a href="register.php">Inscription</a></li>
-                <?php
-                }?> 
-                <li><a href="admin/index.php">Admin</a></li>
-            </ul>
-        </nav>
+        </div>        
     </div>
 </header>

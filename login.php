@@ -21,20 +21,23 @@ if(!empty($_POST['submitted'])) {
     $query-> execute();
     $user = $query->fetch();
     // si user est renseigné
+    
     if(!empty($user)) {
         // Vérification du password
         if(password_verify($password, $user['password'] )) {
+            
             // je renseigne la session
             $_SESSION['user'] = array(
                 'id'     => $user['id'],
                 'pseudo' => $user['pseudo'],
-                'email'  => $user['mail'],
+                'email'  => $user['email'],
                 'role'   => $user['role'],
                 'ip'     => $_SERVER['REMOTE_ADDR']
-            );
-
+            );            
+            
             /// redirection vers l'index front
             header('Location: index.php');
+
         } else {
             $errors['login'] = 'Error credentials';
         }
