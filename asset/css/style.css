@@ -194,3 +194,9 @@ label {
   display: inline-block;
   margin: 0 30px;
 }
+.foot_1 .contact ul {
+    margin-top: 1rem;
+    display: flex;
+    gap: 5px;
+    list-style: none;
+}
