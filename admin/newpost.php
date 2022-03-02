@@ -1,15 +1,21 @@
 <?php
-require('inc/pdo.php');
-require('inc/fonction.php');
-require('inc/request.php');
+session_start();
+
+require('../inc/pdo.php');
+require('../inc/fonction.php');
+require('./inc/request.php');
+require('./inc/parameters.php');
 
 $errors = array();
 // if form soumis
 if (!empty($_POST['submitted'])) {
     // Faille XSS
+    debug($_FILES);
     $title = trim(strip_tags($_POST['title']));
     $content = trim(strip_tags($_POST['content']));
-    $image = trim(strip_tags($_POST['image']));
+    $status = trim(strip_tags($_POST['status']));
+    $user_id = trim(strip_tags($_SESSION['user']['id']));
+    $image = trim(strip_tags($_FILES['image']['name']));
 
     // Validation 
     $errors = validText($errors, $title, 'title', 3, 50);
@@ -41,6 +47,7 @@ if (!empty($_POST['submitted'])) {
         }
     }
     if (count($errors) === 0) {
+
         $sql = "INSERT INTO blog_articles (title, content, user_id, created_at, status, image)
                 VALUES (:title, :content, :user_id, NOW(), :status, :image)";
         $query = $pdo->prepare($sql);
@@ -60,25 +67,37 @@ if (!empty($_POST['submitted'])) {
     }
 }
 
+
 include('inc/header.php'); ?>
 
-<form class="wrap" action="" method="post" novalidate>
-
-    <!-- -------- NOM DE L'ARTICLE -->
+<form class="wrap" action="" method="post" enctype="multipart/form-data" novalidate>
     <label for="title">Nom d'article</label>
     <input type="text" name="title" id="title" value="<?php getInputValue('title') ?>">
     <span class="error"><?php spanError($errors, 'title'); ?></span>
 
-    <!-- -------- DESCRITPION -->
     <label for="title">Description</label>
     <input type="text" name="content" id="content" value="<?php getInputValue('content') ?>">
     <span class="error"><?php spanError($errors, 'content'); ?></span>
 
-    <!-- -------   IMAGE (OPTIONNELLE) -->
+    <label for="title">Image</label>
     <input type="file" name="image" id="image">
     <span class="error"><?php getInputValue('image'); ?></span>
 
+    <select name="status" id="status">
+        <?php foreach ($lesStatus as  $value) { ?>
+            <option value="<?php echo $value; ?>" <?php
+                                                    if (!empty($_POST['status']) && $_POST['status'] === $value) {
+                                                        echo ' selected';
+                                                    } elseif (!empty($article['status'])) {
+                                                        if ($article['status'] === $value) {
+                                                            echo ' selected';
+                                                        }
+                                                    }
+                                                    ?>><?php echo ucfirst($value); ?></option>
+        <?php } ?>
+    </select>
     <input type="submit" name="submitted" value="Créer un article">
+</form>
 
-    <?php
-    include('inc/footer.php');
+<?php
+include('inc/footer.php');
