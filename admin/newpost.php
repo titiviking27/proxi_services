@@ -10,7 +10,7 @@ $errors = array();
 // if form soumis
 if (!empty($_POST['submitted'])) {
     // Faille XSS
-    debug($_FILES);
+
     $title = trim(strip_tags($_POST['title']));
     $content = trim(strip_tags($_POST['content']));
     $status = trim(strip_tags($_POST['status']));
