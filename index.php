@@ -5,7 +5,7 @@ require('inc/fonction.php');
 require('inc/request.php');
 
 // debug($_SESSION);
-$sql = "SELECT b_a.title, b_a.created_at, b_u.pseudo 
+$sql = "SELECT b_a.id, b_a.title, b_a.created_at, b_u.pseudo 
         FROM blog_articles AS b_a 
         LEFT JOIN blog_users AS b_u
         ON b_u.id = b_a.user_id
@@ -26,7 +26,8 @@ include('inc/header.php'); ?>
         <h1><?php echo $blog_article['title']?></h1>
         <p><?php echo $blog_article['pseudo']?></p>
         <p><?= date('d/m/Y à H:i', strtotime($blog_article['created_at']));?></p>
-    <?php 
+        <a href="single.php?id=<?= $blog_article['id']?>">Détail de l'article</a>
+    <?php
     } 
     ?>
     </div>
