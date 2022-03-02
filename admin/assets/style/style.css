@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #fff;
+  --gris: #9d9d9c;
+  --orange: #ec6838;
+}
+
+.clear:before,
+.clear:after {
+  content: " ";
+  display: table;
+}
+
+.clear:after {
+  clear: both;
+}
+
+.clear {
+  *zoom: 1;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+img {
+  vertical-align: bottom;
+  width: 100%;
+}
+
+/* @font-face {
+  font-family: "bodo_amat(font construite avec squirrel generator)";
+  src: url("../fonts/bodo_amat-webfont.woff2") format("woff2"),
+    url("../fonts/bodo_amat-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+} */
+
+body {
+  background-color: rgb(220, 240, 149);
+  color: black;
+  font: 400 16px/1.4 "Indie Flower", sans-seriff;
+  text-align: center;
+}
+
+.wrap {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hidden {
+}
+
+.flexcol {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+#nav li {
+  font-size: 1.2rem;
+}
+
+form .flexcol {
+  width: 50%;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.formInscription div {
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form_login div {
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.for div {
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin: 0.5rem;
+  font-weight: bold;
+}
+
+input {
+  margin: 0 auto;
+  padding: 0.2rem;
+}
+
+#valider {
+  margin: 1rem auto;
+  display: inline;
+  padding: 0.3rem;
+  background-color: rgb(248, 102, 48);
+  font-weight: bold;
+  width: 20%;
+}
+
+footer {
+  margin-top: 4rem;
+  font-size: 2rem;
+  font-weight: bold;
+}

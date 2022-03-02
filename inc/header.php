@@ -18,20 +18,16 @@
             <h1>Proxi Service</h1>
         </div>
         <div class="content">
-            <img src="./asset/img/titi-co.png" alt="">
+            <img src="./asset/img/proxi.gif" alt="">
         </div>
         <nav>
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <?php if(isLogged()) { ?>
                 <li><a href="logout.php">Déconnexion</a></li>
-                <?php if(isLoggedAdmin()) { ?>
-                    <li><a href="admin/index.php">Admin</a></li>
-                    <?php } ?>
-                <?php } else { ?>
+                <li><a href="admin/index.php">Admin</a></li>
                 <li><a href="register.php">Inscription</a></li>
                 <li><a href="login.php">Connexion</a></li>
-                <?php } ?>
+                
             </ul>
         </nav>
     </div>
