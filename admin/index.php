@@ -6,7 +6,7 @@ require('inc/request.php');
 debug($_SESSION);
 include('inc/header.php'); ?>
 <div class="wrap">
-    <h1>Home</h1>
+    <h1>Admin index</h1>
 </div>
 <?php
 include('inc/footer.php');
