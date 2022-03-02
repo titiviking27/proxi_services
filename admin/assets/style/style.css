@@ -61,6 +61,7 @@ body {
 }
 
 .hidden {
+  display: none;
 }
 
 .flexcol {
@@ -77,43 +78,6 @@ body {
 
 #nav li {
   font-size: 1.2rem;
-}
-
-form .flexcol {
-  width: 50%;
-  justify-content: center;
-  margin: 0 auto;
-}
-
-.formInscription div {
-  margin: 0 auto;
-  margin-bottom: 0.5rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.form_login div {
-  margin: 0 auto;
-  margin-bottom: 0.5rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.for div {
-  margin: 0 auto;
-  margin-bottom: 0.5rem;
-  display: flex;
-  flex-direction: column;
-}
-
-form label {
-  margin: 0.5rem;
-  font-weight: bold;
-}
-
-input {
-  margin: 0 auto;
-  padding: 0.2rem;
 }
 
 #valider {
