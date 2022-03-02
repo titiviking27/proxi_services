@@ -74,6 +74,10 @@ label {
   border: 2px solid rgb(28, 110, 164);
   display: inline-block;
 }
+#middle {
+  background: url("../img/logo-work.jpg");
+  background-repeat: no-repeat;
+}
 .error {
   color: red;
   font-size: 15px;

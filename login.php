@@ -46,6 +46,7 @@ if(!empty($_POST['submitted'])) {
     }
 }
 include('inc/header.php'); ?>
+<section id="middle">
     <div class="wrap">
         
         <!-- ------------   Formulaire de connexion  -->
@@ -65,4 +66,5 @@ include('inc/header.php'); ?>
             <p><a href="forget-password.php">Mot de passe oublié</a></p>
         </form>
     </div>
+</section>
 <?php include('inc/footer.php');

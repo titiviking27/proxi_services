@@ -56,6 +56,7 @@ if(!empty($_POST['submitted'])) {
 
 
 include('inc/header.php'); ?>
+<section id="middle">
     <div class="wrap">
         <h2>Modification  de votre mot de passe</h2>
 
@@ -72,6 +73,6 @@ include('inc/header.php'); ?>
             <input type="submit" name="submitted" value="Connectez-Vous">
         </form>
     </div>
-
+</section>
 <?php 
 include('inc/footer.php');

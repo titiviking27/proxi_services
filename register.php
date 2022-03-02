@@ -69,6 +69,7 @@ if(!empty($_POST['submitted'])) {
 }
 
 include('inc/header.php'); ?>
+<section id="middle">
     <div class="wrap">
         <h2>Inscription</h2>
         <form class="wrapform" action="" method="post" novalidate>
@@ -90,4 +91,5 @@ include('inc/header.php'); ?>
             <input type="submit" name="submitted" value="Inscrivez-Vous">
         </form>
     </div>
+</section>
 <?php include('inc/footer.php');
