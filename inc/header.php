@@ -25,8 +25,11 @@
                     <li class="nav-item"><a href="register.php" class="nav-link text-uppercase font-weight-bold">Inscription</a></li>
                     <li class="nav-item"><a href="login.php" class="nav-link text-uppercase font-weight-bold">Connexion</a></li>
                     <?php
-                    }?> 
+                    }
+                    if(isLoggedAdmin()) { ?> 
                     <li class="nav-item"><a href="admin/index.php" class="nav-link text-uppercase font-weight-bold">Admin</a></li>
+                    <?php
+                    } ?>
                 </ul>
             </div>
         </div>
