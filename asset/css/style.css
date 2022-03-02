@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrap {
+    max-width: 1000px;width:100%;margin: 0 auto;
+    text-align: center;
+}
+img {
+    width: 100%;
+}
+ul, ol {
+list-style: none;
+text-align: center;
+}
+body {
+    font-family: 'Creepster', cursive;
+    text-decoration: none;
+}
+h1 {
+    text-align: center;
+    padding: 1rem;
+    color: green;
+    background-color: lime;
+}
+ul li {
+    padding: .5rem;
+    background-color:green;
+    color: lime;
+}
+p {
+    text-align: center;
+    padding: 1rem;
+    color: green;
+    background-color: lime;
+}
+form {
+    display: flex;
+    flex-flow: column;
+}
+input {
+    padding: .5rem;
+    width: 15rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+}
+label {
+    margin-left: 50%;transform: translateX(-50%);width: 15rem; color: rgb(255, 255, 255); font-size: 17px; line-height: 17px; padding: 10px; border-radius: 9px; font-family: Georgia, serif; font-weight: normal; text-decoration: none; font-style: normal; font-variant: normal; text-transform: none; background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%); box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; border: 2px solid rgb(28, 110, 164); display: inline-block;
+}
+.error {
+    color: red;
+    font-size: 15px;
+    background-color: lime;
+    width: 15rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+.header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:auto;
+    background-color: lime;
+    padding: 1rem;
+}
+
+.entete {
+    display: flex;
+}
+
+.entete img {
+    border-radius : 50%;
+    height: 100px;
+    width: 100px;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+.content img {
+    width: 40%;
+}
+.contact ul li a {
+    background: url('img/social-icons.png') no-repeat;
+    display: block;
+    width: 46px;
+    height: 46px;
+}
+.contact ul li .facebook {
+    background-position: 0 0;
+}
+.contact ul li .twitter {
+    background-position: -52px 0;
+}
+.contact ul li .ballonbasket {
+    background-position: -104px 0;
+}
+.contact ul li .fluxrss {
+    background-position: -156px 0;
+}
+.contact ul li .facebook:hover {
+    background-position: 0 -47px;
+}
+.contact ul li .twitter:hover {
+    background-position: -52px -47px;
+}
+.contact ul li .ballonbasket:hover {
+    background-position: -104px -47px;
+}
+.contact ul li .fluxrss:hover {
+    background-position: -156px -47px;
+}
