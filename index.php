@@ -21,6 +21,7 @@ include('inc/header.php'); ?>
         <h1><?php echo $blog_article['title']?></h1>
         <p><?php echo $blog_article['content']?></p>
         <p><?php echo $blog_article['created_at']?></p>
+        <hr class="hr-text">
     <?php 
     } 
     ?>
