@@ -1,12 +1,17 @@
 <?php
 
-function getById($id) {
+function getById($id)
+{
     global $pdo;
-    $sql = "SELECT * FROM users WHERE id = :id ";
+    $sql = "SELECT * FROM blog_articles WHERE id = :id ";
     $query = $pdo->prepare($sql);
-    // protection injection SQL
     $query->bindValue(':id', $id, PDO::PARAM_INT);
     $query->execute();
 
     return  $query->fetch();
 }
+
+$sql = "SELECT * FROM blog_articles";
+$query = $pdo->prepare($sql);
+$query->execute();
+$article = $query->fetchAll();
