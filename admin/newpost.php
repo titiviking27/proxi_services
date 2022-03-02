@@ -47,7 +47,7 @@ if (!empty($_POST['submitted'])) {
         }
     }
     if (count($errors) === 0) {
-        echo 'ok';
+
         $sql = "INSERT INTO blog_articles (title, content, user_id, created_at, status, image)
                 VALUES (:title, :content, :user_id, NOW(), :status, :image)";
         $query = $pdo->prepare($sql);

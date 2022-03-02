@@ -17,10 +17,19 @@
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
                 <ul id="nav" class="navbar-nav ml-auto">
                     <li class="nav-item active"><a href="index.php" class="nav-link text-uppercase font-weight-bold">Home</a></li>
-                    <li class="nav-item"><a href="logout.php" class="nav-link text-uppercase font-weight-bold">Déconnexion</a></li>
-                    <li class="nav-item"><a href="admin/index.php" class="nav-link text-uppercase font-weight-bold">Admin</a></li>
+                    <?php 
+                    if(isLogged()) { ?>
+                        <li class="nav-item"><a href="logout.php" class="nav-link text-uppercase font-weight-bold">Déconnexion</a></li>                        
+                    <?php
+                    } else { ?>
                     <li class="nav-item"><a href="register.php" class="nav-link text-uppercase font-weight-bold">Inscription</a></li>
                     <li class="nav-item"><a href="login.php" class="nav-link text-uppercase font-weight-bold">Connexion</a></li>
+                    <?php
+                    }
+                    if(isLoggedAdmin()) { ?> 
+                    <li class="nav-item"><a href="admin/index.php" class="nav-link text-uppercase font-weight-bold">Admin</a></li>
+                    <?php
+                    } ?>
                 </ul>
             </div>
         </div>
@@ -32,21 +41,14 @@
         </div>
         <div class="content">
             <img src="./asset/img/proxi.gif" alt="">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <?php 
-                if(isLogged()) { ?>
-                    <li><a href="logout.php">Déconnexion</a></li>
-                <?php
-                } else { ?>
-                <li><a href="login.php">Connexion</a></li>
-                <li><a href="register.php">Inscription</a></li>
-                <?php
-                }?> 
-                <li><a href="admin/index.php">Admin</a></li>
-            </ul>
-        </nav>
+            <div class="contenu">
+                <h1>Présentation</h1>
+                <hr class="hr-text" >
+                <p><em><strong>Nous voulons dévellopper le commerce de proximité</strong></em></p>
+                <p><em><strong>Pour permettre au petits commerçants</strong></em></p>
+                <p><em><strong>N'ayant pas les moyens d'investir dans un site web</strong></em></p>
+                <p><em><strong>De vendre leurs produits en ligne sous formes de paniers</strong></em></p>
+            </div>
+        </div>        
     </div>
 </header>
