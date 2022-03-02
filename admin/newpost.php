@@ -10,7 +10,7 @@ $errors = array();
 // if form soumis
 if (!empty($_POST['submitted'])) {
     // Faille XSS
-    debug($_FILES);
+
     $title = trim(strip_tags($_POST['title']));
     $content = trim(strip_tags($_POST['content']));
     $status = trim(strip_tags($_POST['status']));
@@ -48,14 +48,17 @@ if (!empty($_POST['submitted'])) {
     }
     if (count($errors) === 0) {
 
-        $sql = "INSERT INTO blog_articles (title, content, user_id, created_at, status, image)
-                VALUES (:title, :content, :user_id, NOW(), :status, :image)";
+        $sql = "INSERT INTO blog_articles (title, content, user_id, created_at, status, )
+                VALUES (:title, :content, :user_id, NOW(), :status, )";
+
         $query = $pdo->prepare($sql);
         $query->bindValue(':title', $title, PDO::PARAM_STR);
         $query->bindValue(':content', $content, PDO::PARAM_STR);
         $query->bindValue(':user_id', $user_id, PDO::PARAM_INT);
         $query->bindValue(':status', $status, PDO::PARAM_STR);
-        $query->bindValue(':image', $image, PDO::PARAM_STR);
+        // $query->bindValue(':image', $newfile, PDO::PARAM_STR);
+        $query->execute();
+
 
         $point = strrpos($file_name, '.');
         $extens = substr($file_name, $point, strlen($file_name) - $point);
