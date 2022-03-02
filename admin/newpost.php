@@ -66,6 +66,8 @@ if (!empty($_POST['submitted'])) {
         $query->bindValue(':status', $status, PDO::PARAM_STR);
         $query->bindValue(':image', $image, PDO::PARAM_STR);
         $query-> execute(); 
+
+        header('Location: ../index.php');
     }
 }
 
