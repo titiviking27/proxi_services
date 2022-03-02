@@ -23,12 +23,15 @@ if(!empty($_GET['id']) && is_numeric($_GET['id'])) {
     die('404');
 }
 include('inc/header.php'); ?>
-<div class="auteur">
-    <h1>Titre :<?= $blog_article['title']; ?></h1>
-    <p>Contenu : <?= $blog_article['content']; ?></p>
-    <p>Pseudo : <?= $blog_article['pseudo']; ?></p>
-    <p>Date de création : <?= date('d/m/Y',strtotime($blog_article['created_at'])); ?></p>
-    <hr class="hr-text">
-</div>
-
+<section class="middle">
+    <div class="wrap">
+        <div class="auteur">
+            <h1>Titre :<?= $blog_article['title']; ?></h1>
+            <p>Contenu : <?= $blog_article['content']; ?></p>
+            <p>Pseudo : <?= $blog_article['pseudo']; ?></p>
+            <p>Date de création : <?= date('d/m/Y',strtotime($blog_article['created_at'])); ?></p>
+            <hr class="hr-text">
+        </div>
+    </div>
+</section>
 <?php include('inc/footer.php');
