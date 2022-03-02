@@ -13,7 +13,7 @@ function debug($array) {
     echo '</pre>';
 }
 
-function checkTxt($errors, $string, $key, $min = 3, $max = 70) {
+function checkText($errors, $string, $key, $min = 3, $max = 70) {
     if (!empty($string)) {
         if (mb_strlen($string) < $min && $min != $max ) {
             $errors[$key] = 'erreur : '. $min .' caractères minimum';
