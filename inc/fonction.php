@@ -19,7 +19,7 @@ function spanError($err,$key){
 }
 
 
-function validText($errors, $value,$key,$min = 3, $max = 70){
+function validText($errors, $value, $key, $min = 3, $max = 70){
     if(!empty($value)) {
         if(mb_strlen($value) < $min) {
             $errors[$key] = 'Min '.$min.' caractères';
