@@ -48,10 +48,12 @@ img {
 } */
 
 body {
-  background-color: rgb(220, 240, 149);
-  color: black;
+  background: url("../imge/back-admin.png");
+  background-size: 100%;
+  color: orange;
   font: 400 16px/1.4 "Indie Flower", sans-seriff;
   text-align: center;
+  background-repeat: no-repeat;
 }
 
 .wrap {
@@ -76,8 +78,22 @@ body {
   font-weight: bold;
 }
 
-#nav li {
-  font-size: 1.2rem;
+#buttons li a {
+  text-decoration: none;
+  color: red;
+  background-color: orange;
+  width: 15rem;
+  padding: 0.5rem;
+  margin: 1rem;
+  border-radius: 50% 20% / 10% 40%;
+}
+
+#buttons li a:hover {
+  text-decoration: none;
+  color: #000000;
+  background-color: red;
+  width: 15rem;
+  border-radius: 50% 20% / 10% 40%;
 }
 
 #valider {
