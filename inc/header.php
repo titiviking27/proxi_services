@@ -14,7 +14,7 @@
 <header>
     <div class="header">
         <div class="entete">
-            <img src="./asset/img/PHOTO-TITI.jpg"/>
+            <img src="./asset/img/caddie-bio.jpg"/>
             <h1>Proxi Service</h1>
         </div>
         <div class="content">
