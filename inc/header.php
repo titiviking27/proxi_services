@@ -41,6 +41,13 @@
         </div>
         <div class="content">
             <img src="./asset/img/proxi.gif" alt="">
+            <div class="contenu">
+                <h1>Présentation</h1>
+                <p><em><strong>Nous voulons dévellopper le commerce de proximité</strong></em></p>
+                <p><em><strong>Pour permettre au petits commerçants</strong></em></p>
+                <p><em><strong>N'ayant pas les moyens d'investir dans un site web</strong></em></p>
+                <p><em><strong>De vendre leurs produits en ligne sous formes de paniers</strong></em></p>
+            </div>
         </div>        
     </div>
 </header>

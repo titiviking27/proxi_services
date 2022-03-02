@@ -11,7 +11,7 @@ $query->execute();
 $blog_articles = $query->fetchAll();
 include('inc/header.php'); ?>
 <section id="titre">
-    <div class="wrap">
+    <div class="wrap" id="title">
         <h1>Home</h1>
     </div>
 </section>
