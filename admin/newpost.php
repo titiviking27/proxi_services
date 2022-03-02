@@ -60,18 +60,21 @@ if (!empty($_POST['submitted'])) {
     }
 }
 
-
 include('inc/header.php'); ?>
 
 <form class="wrap" action="" method="post" novalidate>
+
+    <!-- -------- NOM DE L'ARTICLE -->
     <label for="title">Nom d'article</label>
     <input type="text" name="title" id="title" value="<?php getInputValue('title') ?>">
     <span class="error"><?php spanError($errors, 'title'); ?></span>
 
+    <!-- -------- DESCRITPION -->
     <label for="title">Description</label>
     <input type="text" name="content" id="content" value="<?php getInputValue('content') ?>">
     <span class="error"><?php spanError($errors, 'content'); ?></span>
 
+    <!-- -------   IMAGE (OPTIONNELLE) -->
     <input type="file" name="image" id="image">
     <span class="error"><?php getInputValue('image'); ?></span>
 
