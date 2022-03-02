@@ -9,7 +9,7 @@ if(!empty($_GET['email']) && !empty($_GET['token'])) {
     $email = urldecode($_GET['email']);
     $token = urldecode($_GET['token']);
 
-    $sql = "SELECT * FROM user WHERE mail = :email AND token = :token";
+    $sql = "SELECT * FROM blog_users WHERE email = :email AND token = :token";
     $query = $pdo->prepare($sql);
     $query->bindValue(':email', $email, PDO::PARAM_STR);
     $query->bindValue(':token', $token, PDO::PARAM_STR);
@@ -58,15 +58,20 @@ if(!empty($_POST['submitted'])) {
 include('inc/header.php'); ?>
     <div class="wrap">
         <h2>Modification  de votre mot de passe</h2>
+
         <form class="wrapform" action="" method="post" novalidate>
+            <!-- --- INPUT PASSWORD 1 -->
             <label for="password">Mot de passe *</label>
             <input type="password" name="password" id="password">
             <span class="error"><?php spanError($errors,'password'); ?></span>
 
+            <!-- --- INPUT PASSWORD 2 -->
             <label for="password2">Confirmation mot de passe *</label>
             <input type="password" name="password2" id="password2">
-
+            
             <input type="submit" name="submitted" value="Connectez-Vous">
         </form>
     </div>
-<?php include('inc/footer.php');
+
+<?php 
+include('inc/footer.php');

@@ -3,14 +3,18 @@ require('inc/pdo.php');
 require('inc/fonction.php');
 require('inc/request.php');
 $errors = [];
+
 if(!empty($_POST['submitted'])) {
     // FailleXss
     $mail = trim(strip_tags($_POST['mail']));
-    $sql = "SELECT * FROM user WHERE mail = :mail";
+    
+    // Je vais chercher l'email
+    $sql = "SELECT * FROM blog_users WHERE email = :mail";
     $query = $pdo->prepare($sql);
     $query->bindValue(':mail', $mail, PDO::PARAM_STR);
     $query->execute();
     $user = $query->fetch();
+
     if(!empty($user)) {
         $urlBase = urlRemovelast( "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
         $href = $urlBase . '/modif-password.php?email=' . urlencode($mail) . '&token=' . urlencode($user['token']);
@@ -20,6 +24,7 @@ if(!empty($_POST['submitted'])) {
         $errors['mail'] = 'error credentials';
     }
 }
+
 include('inc/header.php'); ?>
     <div class="wrap">
         <h2>Mot de passe oublié</h2>
