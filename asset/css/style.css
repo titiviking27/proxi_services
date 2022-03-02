@@ -27,7 +27,7 @@ h1 {
   text-align: center;
   padding: 1rem;
   color: green;
-  background-color: lime;
+  background-color: cyan;
 }
 /* ul li {
     padding: .5rem;
@@ -38,7 +38,7 @@ p {
   text-align: center;
   padding: 1rem;
   color: green;
-  background-color: lime;
+  background-color: #4ca1af;
 }
 form {
   display: flex;
@@ -88,18 +88,20 @@ label {
   justify-content: space-between;
   align-items: center;
   margin: auto;
-  background-color: lime;
+  background-color: cyan;
   padding: 1rem;
 }
 
 .entete {
   display: flex;
+  border-style: solid;
 }
 
 .entete img {
   border-radius: 50%;
   height: 100px;
   width: 100px;
+  background-color: lime;
 }
 .content {
   display: flex;
@@ -108,6 +110,10 @@ label {
 }
 .content img {
   width: 40%;
+}
+.contenu {
+    flex-flow: row wrap;
+    border-style: solid;
 }
 .contact ul li a {
   background: url("../img/social-icons.png") no-repeat;
@@ -199,4 +205,7 @@ label {
     display: flex;
     gap: 5px;
     list-style: none;
+}
+#title h1 {
+    border-style: solid;
 }
