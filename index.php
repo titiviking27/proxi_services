@@ -57,20 +57,20 @@ include('inc/header.php');
         <?php foreach ($blog_articles as $blog_article) { ?>
             <?php if ($blog_article['status'] == 'publish') { ?>
                 <br>
-                <h1 class="article_title"><?php echo $blog_article['title'] ?></h1>
-                <p><?php echo $blog_article['pseudo'] ?></p>
-                <p><?= date('d/m/Y à H:i', strtotime($blog_article['created_at'])); ?></p>
+                <div class="border">
+                    <h1 class="article_title"><?php echo $blog_article['title'] ?></h1>
+                    <p><?php echo $blog_article['pseudo'] ?></p>
+                    <p><?= date('d/m/Y à H:i', strtotime($blog_article['created_at'])); ?></p>
+                </div>
                 <hr class="hr-text">
                 <a class="details" href="single.php?id=<?= $blog_article['id'] ?>">Détail de l'article</a>
                 <hr class="hr-text">
-
         <?php }
         }
         ?>
-
+    </div>
         <h4 class="paginator">Page <?= $currentPage; ?></h4>
         <span class="paginator"><?= $paginator; ?></span>
-    </div>
 </section>
 <?php
 include('inc/footer.php');
