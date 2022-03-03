@@ -25,9 +25,11 @@
 }
 h1 {
   color: red;
+  margin: 1rem;
 }
 h4 {
-  color: red;
+  color: rgb(255, 0, 0);
+  margin: 1rem;
 }
 ul,
 ol {
@@ -127,6 +129,7 @@ label {
   padding: 0.5rem;
   margin: 1rem;
   border-radius: 50% 20% / 10% 40%;
+  border: 3px solid black;
 }
 
 #buttons li a:hover {
