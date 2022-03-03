@@ -12,7 +12,7 @@
 </head>
 <header>
     <h1>Proxi'Services</h1>    
-    <ul id="nav">        
+    <ul id="buttons">        
         <li><a href="index.php">Admin Index</a></li>        
     </ul>
     <br>    
