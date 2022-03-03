@@ -1,4 +1,5 @@
 inc/pdo.php
 vendor/
 .DS_Store
+upload/
 admin/upload

@@ -14,11 +14,11 @@ if (!empty($_POST['submitted'])) {
     $title = trim(strip_tags($_POST['title']));
     $content = trim(strip_tags($_POST['content']));
     $status = trim(strip_tags($_POST['status']));
-    $user_id = trim(strip_tags($_SESSION['user']['id']));    
+    $user_id = trim(strip_tags($_SESSION['user']['id']));
 
     // Validation 
     $errors = validText($errors, $title, 'title', 3, 50);
-    $errors = validText($errors, $content, 'content', 5, 150);
+    $errors = validText($errors, $content, 'content', 5, 2000);
 
     if (!empty($_FILES['image']) && $_FILES['image']['error'] > 0) {
         if ($_FILES['image']['error'] != 4) {
@@ -47,8 +47,8 @@ if (!empty($_POST['submitted'])) {
                 $point = strrpos($file_name, '.');
                 $extens = substr($file_name, $point, strlen($file_name) - $point);
                 $newfile = time() . generateRandomString(12);
-                move_uploaded_file($file_tmp, 'upload/' . $newfile .$extens);
-                $image = 'upload/' . $newfile .$extens;
+                move_uploaded_file($file_tmp, 'upload/' . $newfile . $extens);
+                $image = 'upload/' . $newfile . $extens;
             }
         }
     }
@@ -65,42 +65,15 @@ if (!empty($_POST['submitted'])) {
         $query->bindValue(':user_id', $user_id, PDO::PARAM_INT);
         $query->bindValue(':status', $status, PDO::PARAM_STR);
         $query->bindValue(':image', $image, PDO::PARAM_STR);
-        $query-> execute(); 
+        $query->execute();
 
         header('Location: ../index.php');
     }
 }
 
 
-include('inc/header.php'); ?>
-<div id="container" class="wrap">
-    <form id="form" class="wrap" action="" method="post" enctype="multipart/form-data" novalidate>
-        <label for="title">Nom d'article</label>
-        <input type="text" name="title" id="title" value="<?php getInputValue('title') ?>">
-        <span class="error"><?php spanError($errors, 'title'); ?></span>
-        <label for="title">Description</label> 
-        <input type="text" name="content" id="content" value="<?php getInputValue('content') ?>">
-        <span class="error"><?php spanError($errors, 'content'); ?></span>
-        <label for="title">Image</label>
-        <input type="file" name="image" id="image">
+include('inc/header.php');
 
-        <select name="status" id="status">
-            <?php foreach ($lesStatus as $value) { ?>
-                <option value="<?php echo $value; ?>" <?php
-                    if (!empty($_POST['status']) && $_POST['status'] === $value) {
-                        echo ' selected';
-                    } elseif (!empty($article['status'])) {
-                        if ($article['status'] === $value) {
-                            echo ' selected';
-                        }
-                    }
-                    ?>><?php echo ucfirst($value); ?></option>
-            <?php } ?>
-        </select>
-        <input type="submit" name="submitted" value="Créer un article">
-        <br>
-        <span class="error"><?php spanError($errors, 'image'); ?></span>
-    </form>
-</div>
-<?php
+include('../view/article_form.php');
+
 include('inc/footer.php');
