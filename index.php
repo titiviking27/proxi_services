@@ -30,8 +30,6 @@ $query->execute();
 $blog_articles = $query->fetchAll();
 
 
-
-
 $sql = "SELECT COUNT(id) FROM blog_articles";
 $query = $pdo->prepare($sql);
 $query->execute();

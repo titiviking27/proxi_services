@@ -31,7 +31,7 @@
                     <?php
                     } ?>
                 </ul>
-            </div>
+            </div>            
         </div>
     </nav>
     <div class="header">
