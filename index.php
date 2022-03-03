@@ -3,22 +3,47 @@ session_start();
 require('inc/pdo.php');
 require('inc/fonction.php');
 require('inc/request.php');
+require ('vendor/autoload.php');
+
+use JasonGrimes\Paginator;
+// nombres d'articles par page
+$itemsPerPage = 2;
+// page courrent par defaut
+$urlPattern = 'index.php?currentPage=(:num)';
+$currentPage = 1;
+if(!empty($_GET['currentPage'])) {
+    $currentPage = $_GET['currentPage'];
+}
+
+// le pattern
+$offset = $currentPage * $itemsPerPage - $itemsPerPage;
 
 // jointure pour associer users et articles
 $sql = "SELECT b_a.id, b_a.title, b_a.created_at, b_u.pseudo 
         FROM blog_articles AS b_a 
         LEFT JOIN blog_users AS b_u
         ON b_u.id = b_a.user_id
-        ORDER BY b_a.created_at DESC";
+        ORDER BY b_a.created_at DESC
+        LIMIT $itemsPerPage OFFSET $offset";
 $query = $pdo->prepare($sql);
 $query->execute();
 $blog_articles = $query->fetchAll();
 
-include('inc/header.php'); ?>
+$sql = "SELECT COUNT(id) FROM blog_articles";
+$query = $pdo->prepare($sql);
+$query->execute();
+$totalItems = $query->fetchColumn();
+
+$paginator = new Paginator($totalItems, $itemsPerPage, $currentPage, $urlPattern);
+
+include('inc/header.php'); 
+?>
 <section id="titre">
     <div class="wrap" id="title">
         <br>
         <h1>Home</h1>
+    <p class="paginator"><?= $paginator; ?></p>
+
     </div>
 </section>
 <section id="article">
@@ -32,8 +57,9 @@ include('inc/header.php'); ?>
         <a class="details" href="single.php?id=<?= $blog_article['id']?>">Détail de l'article</a>
         <hr class="hr-text">
     <?php
-    } 
+    }
     ?>
+    <p class="paginator"><?= $paginator; ?></p>
     </div>
 </section>
 <?php 
