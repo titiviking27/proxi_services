@@ -7,7 +7,7 @@ require ('vendor/autoload.php');
 
 use JasonGrimes\Paginator;
 // nombres d'articles par page
-$itemsPerPage = 2;
+$itemsPerPage = 3;
 // page courrent par defaut
 $urlPattern = 'index.php?currentPage=(:num)';
 $currentPage = 1;
@@ -42,7 +42,10 @@ include('inc/header.php');
     <div class="wrap" id="title">
         <br>
         <h1>Home</h1>
-    <p class="paginator"><?= $paginator; ?></p>
+
+        <h4 class="paginator">Page <?= $currentPage; ?></h4>
+        <span class="paginator"><?= $paginator; ?></span>
+
 
     </div>
 </section>
@@ -59,7 +62,8 @@ include('inc/header.php');
     <?php
     }
     ?>
-    <p class="paginator"><?= $paginator; ?></p>
+    <h4 class="paginator">Page <?= $currentPage; ?></h4>
+        <span class="paginator"><?= $paginator; ?></span>
     </div>
 </section>
 <?php 

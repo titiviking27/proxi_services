@@ -241,18 +241,6 @@ label {
   justify-content: center;
 }
 
-/* CSS GREG POUR PAGINATOR */
-.pagination {
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: row nowrap;
-  list-style: none;
-  justify-content: center;
-}
-
-.pagination li {
-  padding: 0.3rem;
-}
 .details {
   margin-left: 25%;
   transform: translateX(-50%);
@@ -277,4 +265,24 @@ label {
   box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px;
   border: 2px solid black;
   display: inline-block;
+}
+
+/* CSS GREG POUR PAGINATOR */
+.pagination {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: row nowrap;
+  list-style: none;
+  justify-content: center;
+}
+
+.pagination li a {
+  text-decoration: none;
+  padding: 0.5rem;
+  color: wheat;
+}
+
+h4.paginator {
+  padding: 0.5rem;
+  color: wheat;
 }
