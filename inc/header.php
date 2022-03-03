@@ -36,8 +36,12 @@
             <div class="recherche">
                 <form class="search" action="" method="GET">
                     <div class="loupe">
-                        <input class="form-control inps" type="search" placeholder="Recherche par mot clé" aria-label="Search" nom="search" value="">
-                        <a href="search.php?search=<?php $_GET["search"] ?>"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        <input class="form-control inps" type="search" placeholder="Recherche par mot clé" aria-label="Search" name="search" value="">
+                        <a href="./search.php?search=<?php 
+                            if (!empty($_GET['search'])) { 
+                                echo $_GET['search']; 
+                                } ?>
+                                "><i class="fa-solid fa-magnifying-glass"></i></a>
                     </div>
                 </form>
             </div>

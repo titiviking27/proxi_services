@@ -10,7 +10,7 @@ if (!empty($_GET['search']) && is_string($_GET['search'])) {
     $motclef = trim(strip_tags($_GET['search']));
     echo $motclef;    
 
-    $sql = "SELECT b_a.title, b_a.content, b_u.pseudo 
+    $sql = "SELECT b_a.id, b_a.title, b_a.content, b_u.pseudo 
     FROM blog_articles AS b_a 
     LEFT JOIN blog_users AS b_u
     ON b_u.id = b_a.user_id 
@@ -19,8 +19,10 @@ if (!empty($_GET['search']) && is_string($_GET['search'])) {
     $query->bindValue(':search','%'.$motclef.'%');
     $query->execute();
 
-    $resultSearch = $query->fetchAll();
+    $resultSearch = $query->fetch();
 
     debug($resultSearch);
+    header('location: single.php?id='. $resultSearch['id']);
+
 
 }
