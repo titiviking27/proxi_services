@@ -9,9 +9,13 @@ use JasonGrimes\Paginator;
 // nombres d'articles par page
 $itemsPerPage = 2;
 // page courrent par defaut
+$urlPattern = 'index.php?currentPage=(:num)';
 $currentPage = 1;
+if(!empty($_GET['currentPage'])) {
+    $currentPage = $_GET['currentPage'];
+}
+
 // le pattern
-$urlPattern = '/foo/page/(:num)';
 $offset = $currentPage * $itemsPerPage - $itemsPerPage;
 
 // jointure pour associer users et articles
@@ -30,15 +34,16 @@ $query = $pdo->prepare($sql);
 $query->execute();
 $totalItems = $query->fetchColumn();
 
-// $paginator = new Paginator($totalItems, $itemsPerPage, $currentPage, $urlPattern);
+$paginator = new Paginator($totalItems, $itemsPerPage, $currentPage, $urlPattern);
 
 include('inc/header.php'); 
-
-
+?>
 <section id="titre">
     <div class="wrap" id="title">
         <br>
         <h1>Home</h1>
+    <p class="paginator"><?= $paginator; ?></p>
+
     </div>
 </section>
 <section id="article">
@@ -53,6 +58,7 @@ include('inc/header.php');
     <?php
     }
     ?>
+    <p class="paginator"><?= $paginator; ?></p>
     </div>
 </section>
 <?php 

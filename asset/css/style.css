@@ -22,13 +22,13 @@ h1 {
   text-align: center;
   padding: 1rem;
   color: #731702;
-  background-color: #02735E;
+  background-color: #02735e;
 }
 p {
   text-align: center;
   padding: 1rem;
   color: #731702;
-  background-color: #03A678;
+  background-color: #03a678;
 }
 form {
   display: flex;
@@ -72,7 +72,7 @@ label {
 .error {
   color: red;
   font-size: 15px;
-  background-color: #F9F93C;
+  background-color: #f9f93c;
   width: 15rem;
   margin-left: 50%;
   transform: translateX(-50%);
@@ -82,7 +82,7 @@ label {
   justify-content: space-between;
   align-items: center;
   margin: auto;
-  background-color: #9BFC83;
+  background-color: #9bfc83;
   padding: 1rem;
 }
 
@@ -107,9 +107,9 @@ label {
   width: 40%;
 }
 .contenu {
-    flex-flow: row wrap;
-    border-style: solid;
-    border-radius: 5px;
+  flex-flow: row wrap;
+  border-style: solid;
+  border-radius: 5px;
 }
 .contact ul li a {
   background: url("../img/social-icons.png") no-repeat;
@@ -197,14 +197,14 @@ label {
   margin: 0 30px;
 }
 .foot_1 .contact ul {
-    margin-top: 1rem;
-    display: flex;
-    gap: 5px;
-    list-style: none;
+  margin-top: 1rem;
+  display: flex;
+  gap: 5px;
+  list-style: none;
 }
 #title h1 {
-    border-style: solid;
-    border-radius: 5px;
+  border-style: solid;
+  border-radius: 5px;
 }
 .hr-text {
   line-height: 1em;
@@ -214,21 +214,21 @@ label {
   color: #000;
   text-align: center;
   height: 1.5em;
-  opacity: .5;
+  opacity: 0.5;
 }
 .hr-text:after {
   content: attr(data-content);
   position: relative;
   display: inline-block;
   color: #000;
-  padding: 0 .5em;
+  padding: 0 0.5em;
   line-height: 1.5em;
   color: #fff;
-  background-color: #A60F9F;
+  background-color: #a60f9f;
 }
 .hr-text:before {
   content: "";
-  background: linear-gradient(90deg,transparent,red,transparent);
+  background: linear-gradient(90deg, transparent, red, transparent);
   position: absolute;
   left: 0;
   top: 50%;
@@ -239,4 +239,17 @@ label {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* CSS GREG POUR PAGINATOR */
+.pagination {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: row nowrap;
+  list-style: none;
+  justify-content: center;
+}
+
+.pagination li {
+  padding: 0.3rem;
 }
