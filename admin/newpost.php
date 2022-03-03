@@ -75,21 +75,14 @@ if (!empty($_POST['submitted'])) {
 include('inc/header.php'); ?>
 <div id="container" class="wrap">
     <form id="form" class="wrap" action="" method="post" enctype="multipart/form-data" novalidate>
-        <br> 
         <label for="title">Nom d'article</label>
-        <br> 
         <input type="text" name="title" id="title" value="<?php getInputValue('title') ?>">
-        <br> 
         <span class="error"><?php spanError($errors, 'title'); ?></span>
-        <br> 
-        <label for="title">Description</label>
-        <br> 
+        <label for="title">Description</label> 
         <input type="text" name="content" id="content" value="<?php getInputValue('content') ?>">
-        <br> 
         <span class="error"><?php spanError($errors, 'content'); ?></span>
         <label for="title">Image</label>
         <input type="file" name="image" id="image">
-        <span class="error"><?php spanError($errors, 'image'); ?></span>
 
         <select name="status" id="status">
             <?php foreach ($lesStatus as $value) { ?>
@@ -105,6 +98,8 @@ include('inc/header.php'); ?>
             <?php } ?>
         </select>
         <input type="submit" name="submitted" value="Créer un article">
+        <br>
+        <span class="error"><?php spanError($errors, 'image'); ?></span>
     </form>
 </div>
 <?php
