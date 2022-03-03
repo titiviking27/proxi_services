@@ -6,13 +6,15 @@
             <p><em>Epaignes 27260 France.</em></p>
         </div>
         <hr class="hr-text">
-        <div class="contact">
-            <ul>
-            <li><a class="facebook" href="https://www.facebook.com/home.php"></a></li>
-            <li><a class="twitter" href="https://twitter.com/?lang=fr"></a></li>
-            <li><a class="ballonbasket" href="https://www.nba.com/bulls/"></a></li>
-            <li><a class="fluxrss" href="https://fr.wikipedia.org/wiki/Atom_Syndication_Format"></a></li>
-            </ul>
+        <div class="socialnetwork">
+            <div class="contact">
+                <ul>
+                <li><a class="facebook" href="https://www.facebook.com/home.php"></a></li>
+                <li><a class="twitter" href="https://twitter.com/?lang=fr"></a></li>
+                <li><a class="ballonbasket" href="https://www.nba.com/bulls/"></a></li>
+                <li><a class="fluxrss" href="https://fr.wikipedia.org/wiki/Atom_Syndication_Format"></a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <hr class="hr-text">

@@ -23,7 +23,12 @@
 .clear {
   *zoom: 1;
 }
-
+h1 {
+  color: red;
+}
+h4 {
+  color: red;
+}
 ul,
 ol {
   list-style: none;
@@ -56,6 +61,32 @@ body {
   background-repeat: no-repeat;
 }
 
+label {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 15rem;
+  color: rgb(255, 255, 255);
+  font-size: 17px;
+  line-height: 17px;
+  padding: 10px;
+  border-radius: 9px;
+  font-family: Georgia, serif;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  background-image: linear-gradient(
+    to right,
+    rgb(28, 110, 164) 0%,
+    rgb(35, 136, 203) 50%,
+    rgb(20, 78, 117) 100%
+  );
+  box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px;
+  border: 2px solid rgb(28, 110, 164);
+  display: inline-block;
+}
+
 .wrap {
   max-width: 1000px;
   width: 100%;
@@ -76,6 +107,16 @@ body {
   color: red;
   font-size: 0.8rem;
   font-weight: bold;
+}
+
+#container {
+  background-color: orange;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  width: 30%;
+  border-radius: 5%;
+  border: 2px solid black;
 }
 
 #buttons li a {
@@ -109,4 +150,10 @@ footer {
   margin-top: 4rem;
   font-size: 2rem;
   font-weight: bold;
+}
+span {
+  margin: 1rem;
+}
+input {
+  margin: 1rem;
 }

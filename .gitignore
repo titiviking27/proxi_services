@@ -1,4 +1,8 @@
 inc/pdo.php
 vendor/
 .DS_Store
+<<<<<<< HEAD
 upload/
+=======
+admin/upload
+>>>>>>> 7998fee7363e6f5378ac05f6fed0eb4d4b4af2bb

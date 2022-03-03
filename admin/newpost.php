@@ -72,8 +72,42 @@ if (!empty($_POST['submitted'])) {
 }
 
 
+<<<<<<< HEAD
 include('inc/header.php');
 
 include('../view/article_form.php');
 
+=======
+include('inc/header.php'); ?>
+<div id="container" class="wrap">
+    <form id="form" class="wrap" action="" method="post" enctype="multipart/form-data" novalidate>
+        <label for="title">Nom d'article</label>
+        <input type="text" name="title" id="title" value="<?php getInputValue('title') ?>">
+        <span class="error"><?php spanError($errors, 'title'); ?></span>
+        <label for="title">Description</label> 
+        <input type="text" name="content" id="content" value="<?php getInputValue('content') ?>">
+        <span class="error"><?php spanError($errors, 'content'); ?></span>
+        <label for="title">Image</label>
+        <input type="file" name="image" id="image">
+
+        <select name="status" id="status">
+            <?php foreach ($lesStatus as $value) { ?>
+                <option value="<?php echo $value; ?>" <?php
+                    if (!empty($_POST['status']) && $_POST['status'] === $value) {
+                        echo ' selected';
+                    } elseif (!empty($article['status'])) {
+                        if ($article['status'] === $value) {
+                            echo ' selected';
+                        }
+                    }
+                    ?>><?php echo ucfirst($value); ?></option>
+            <?php } ?>
+        </select>
+        <input type="submit" name="submitted" value="Créer un article">
+        <br>
+        <span class="error"><?php spanError($errors, 'image'); ?></span>
+    </form>
+</div>
+<?php
+>>>>>>> 7998fee7363e6f5378ac05f6fed0eb4d4b4af2bb
 include('inc/footer.php');

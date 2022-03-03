@@ -12,32 +12,23 @@
 img {
   width: 100%;
 }
-/* ul, ol {
-list-style: none;
-text-align: center;
-} */
 body {
   font-family: "Oswald", sans-serif;
   text-decoration: none;
   min-height: 110vh;
-  background-color: #4ca1af;
+  background-color: #014040;
 }
 h1 {
   text-align: center;
   padding: 1rem;
-  color: green;
-  background-color: cyan;
+  color: #731702;
+  background-color: #02735E;
 }
-/* ul li {
-    padding: .5rem;
-    background-color:green;
-    color: lime;
-} */
 p {
   text-align: center;
   padding: 1rem;
-  color: green;
-  background-color: #4ca1af;
+  color: #731702;
+  background-color: #03A678;
 }
 form {
   display: flex;
@@ -74,14 +65,14 @@ label {
   border: 2px solid rgb(28, 110, 164);
   display: inline-block;
 }
-#middle {
+/* #middle {
   background: url("../img/logo-work.jpg");
   background-repeat: no-repeat;
-}
+} */
 .error {
   color: red;
   font-size: 15px;
-  background-color: lime;
+  background-color: #F9F93C;
   width: 15rem;
   margin-left: 50%;
   transform: translateX(-50%);
@@ -91,13 +82,14 @@ label {
   justify-content: space-between;
   align-items: center;
   margin: auto;
-  background-color: cyan;
+  background-color: #9BFC83;
   padding: 1rem;
 }
 
 .entete {
   display: flex;
   border-style: solid;
+  border-radius: 5px;
 }
 
 .entete img {
@@ -117,6 +109,7 @@ label {
 .contenu {
     flex-flow: row wrap;
     border-style: solid;
+    border-radius: 5px;
 }
 .contact ul li a {
   background: url("../img/social-icons.png") no-repeat;
@@ -211,6 +204,7 @@ label {
 }
 #title h1 {
     border-style: solid;
+    border-radius: 5px;
 }
 .hr-text {
   line-height: 1em;
@@ -230,7 +224,7 @@ label {
   padding: 0 .5em;
   line-height: 1.5em;
   color: #fff;
-  background-color: #012533;
+  background-color: #A60F9F;
 }
 .hr-text:before {
   content: "";
@@ -240,4 +234,34 @@ label {
   top: 50%;
   width: 100%;
   height: 2px;
+}
+.socialnetwork {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.details {
+  margin-left: 25%;
+  transform: translateX(-50%);
+  width: 15rem;
+  color: rgb(255, 255, 255);
+  font-size: 17px;
+  line-height: 17px;
+  padding: 10px;
+  border-radius: 9px;
+  font-family: Georgia, serif;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  background-image: linear-gradient(
+    to right,
+    rgb(28, 164, 96) 0%,
+    rgb(30, 189, 109) 50%,
+    rgb(17, 153, 85) 100%
+  );
+  box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px;
+  border: 2px solid black;
+  display: inline-block;
 }
