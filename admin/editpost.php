@@ -9,7 +9,6 @@ require('./inc/parameters.php');
 if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
     $id = $_GET['id'];
     $article = getById($id);
-    debug($article);
     if (empty($article)) {
         die('404');
     }
