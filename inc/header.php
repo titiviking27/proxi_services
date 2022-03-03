@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4e7daa302a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./asset/css/style.css">
 </head>
 <body>
@@ -31,6 +32,14 @@
                     <?php
                     } ?>
                 </ul>
+            </div>
+            <div class="recherche">
+                <form class="search">
+                    <div class="loupe">
+                        <input class="form-control inps" type="search" placeholder="Recherche par mot clé" aria-label="Search">
+                        <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+                </form>
             </div>
         </div>
     </nav>
