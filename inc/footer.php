@@ -1,7 +1,7 @@
 <footer>
     <div class="foot_1">
         <div class="text">
-            <p><em><strong>Titi's & CO</strong></em></p>
+            <p><em><strong>Proxi'Services'</strong></em></p>
             <p><em>66, Route Du Paradis</em></p>
             <p><em>Epaignes 27260 France.</em></p>
         </div>
