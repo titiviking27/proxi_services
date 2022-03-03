@@ -53,7 +53,8 @@ include('inc/header.php');
         <h1 class="article_title"><?php echo $blog_article['title']?></h1>
         <p><?php echo $blog_article['pseudo']?></p>
         <p><?= date('d/m/Y à H:i', strtotime($blog_article['created_at']));?></p>
-        <a href="single.php?id=<?= $blog_article['id']?>">Détail de l'article</a>
+        <hr class="hr-text">
+        <a class="details" href="single.php?id=<?= $blog_article['id']?>">Détail de l'article</a>
         <hr class="hr-text">
     <?php
     }
