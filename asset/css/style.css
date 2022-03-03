@@ -265,3 +265,29 @@ label {
   border: 2px solid black;
   display: inline-block;
 }
+.bouton {
+  margin-left: 25%;
+  transform: translateX(-50%);
+  width: 15rem;
+  color: rgb(255, 255, 255);
+  font-size: 17px;
+  line-height: 17px;
+  padding: 10px;
+  border-radius: 9px;
+  font-family: Georgia, serif;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  background-image: linear-gradient(
+    to right,
+    rgb(28, 164, 96) 0%,
+    rgb(30, 189, 109) 50%,
+    rgb(17, 153, 85) 100%
+  );
+  box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px;
+  border: 2px solid black;
+  display: inline-block;
+  cursor: pointer;
+}
