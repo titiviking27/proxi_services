@@ -12,32 +12,23 @@
 img {
   width: 100%;
 }
-/* ul, ol {
-list-style: none;
-text-align: center;
-} */
 body {
   font-family: "Oswald", sans-serif;
   text-decoration: none;
   min-height: 110vh;
-  background-color: #4ca1af;
+  background-color: #014040;
 }
 h1 {
   text-align: center;
   padding: 1rem;
-  color: green;
-  background-color: cyan;
+  color: #731702;
+  background-color: #02735E;
 }
-/* ul li {
-    padding: .5rem;
-    background-color:green;
-    color: lime;
-} */
 p {
   text-align: center;
   padding: 1rem;
-  color: green;
-  background-color: #4ca1af;
+  color: #731702;
+  background-color: #03A678;
 }
 form {
   display: flex;
@@ -81,7 +72,7 @@ label {
 .error {
   color: red;
   font-size: 15px;
-  background-color: lime;
+  background-color: #F9F93C;
   width: 15rem;
   margin-left: 50%;
   transform: translateX(-50%);
@@ -91,7 +82,7 @@ label {
   justify-content: space-between;
   align-items: center;
   margin: auto;
-  background-color: cyan;
+  background-color: #9BFC83;
   padding: 1rem;
 }
 
@@ -230,7 +221,7 @@ label {
   padding: 0 .5em;
   line-height: 1.5em;
   color: #fff;
-  background-color: #012533;
+  background-color: #A60F9F;
 }
 .hr-text:before {
   content: "";
