@@ -10,7 +10,6 @@ require('./inc/parameters.php');
 if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
     $id = $_GET['id'];
     $article = getById($id);
-    debug($article);
     if (empty($article)) {
         die('404');
     }
@@ -18,13 +17,14 @@ if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
     die('404');
 }
 
-$sql = "DELETE FROM blog_articles WHERE id = :id";
+$sql = "UPDATE blog_articles SET modified_at = NOW(), status = :status WHERE id = :id";;
 $query = $pdo->prepare($sql);
 $query->bindValue(':id', $id, PDO::PARAM_INT);
+$query->bindValue(':status', 'draft', PDO::PARAM_STR);
 $query->execute();
 
 include('inc/header.php');
 
-echo '<p>Article Supprimé</p>';
+echo '<h2>Article Supprimé</h2>';
 
 include('inc/footer.php');

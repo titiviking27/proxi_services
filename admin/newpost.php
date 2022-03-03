@@ -23,8 +23,6 @@ if (!empty($_POST['submitted'])) {
     if (!empty($_FILES['image']) && $_FILES['image']['error'] > 0) {
         if ($_FILES['image']['error'] != 4) {
             $errors['image'] = 'Error: ' . $_FILES['image']['error'];
-        } else {
-            $errors['image'] = 'Veuillez renseigner une image';
         }
     } else {
         $file_name = $_FILES['image']['name'];
