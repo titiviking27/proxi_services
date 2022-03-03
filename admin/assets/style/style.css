@@ -25,9 +25,11 @@
 }
 h1 {
   color: red;
+  margin: 1rem;
 }
 h4 {
-  color: red;
+  color: rgb(255, 0, 0);
+  margin: 1rem;
 }
 ul,
 ol {
@@ -43,14 +45,6 @@ img {
   vertical-align: bottom;
   width: 100%;
 }
-
-/* @font-face {
-  font-family: "bodo_amat(font construite avec squirrel generator)";
-  src: url("../fonts/bodo_amat-webfont.woff2") format("woff2"),
-    url("../fonts/bodo_amat-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-} */
 
 body {
   background: url("../imge/back-admin.png");
@@ -114,9 +108,10 @@ label {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  width: 30%;
+  width: 35%;
   border-radius: 5%;
-  border: 2px solid black;
+  border: 3px solid black;
+  margin-left: 35%;
 }
 
 #buttons li a {
@@ -127,6 +122,7 @@ label {
   padding: 0.5rem;
   margin: 1rem;
   border-radius: 50% 20% / 10% 40%;
+  border: 3px solid black;
 }
 
 #buttons li a:hover {
