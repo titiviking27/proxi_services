@@ -46,14 +46,6 @@ img {
   width: 100%;
 }
 
-/* @font-face {
-  font-family: "bodo_amat(font construite avec squirrel generator)";
-  src: url("../fonts/bodo_amat-webfont.woff2") format("woff2"),
-    url("../fonts/bodo_amat-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-} */
-
 body {
   background: url("../imge/back-admin.png");
   background-size: 100%;
@@ -116,9 +108,10 @@ label {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  width: 30%;
+  width: 35%;
   border-radius: 5%;
-  border: 2px solid black;
+  border: 3px solid black;
+  margin-left: 35%;
 }
 
 #buttons li a {

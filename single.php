@@ -39,8 +39,8 @@ include('inc/header.php'); ?>
             }
             ?>
             <p>Date de création : <?= date('d/m/Y', strtotime($blog_article['created_at'])); ?></p>
-            <p><input type="button" value="Editer l'article" ; onclick=window.location.href='admin/editpost.php?id=<?= $_GET['id']; ?>'></p>
-            <p><input type="button" value="Supprimer l'article" ; onclick=window.location.href='admin/deletepost.php?id=<?= $_GET['id']; ?>'></p>
+            <p><input class="bouton" type="button" value="Editer l'article" ; onclick=window.location.href='admin/editpost.php?id=<?= $_GET['id']; ?>'></p>
+            <p><input class="bouton" type="button" value="Supprimer l'article" ; onclick=window.location.href='admin/deletepost.php?id=<?= $_GET['id']; ?>'></p>
             <hr class="hr-text">
         </div>
     </div>
