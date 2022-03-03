@@ -33,7 +33,7 @@ include('inc/header.php'); ?>
             <p>Pseudo : <?= $blog_article['pseudo']; ?></p>
             <?php
             //  Affichage de l'image si image dans l'article
-            if (!empty($blog_article['image'])) { ?>
+            if (!empty($blog_article['image'])) { ?>                
                 <img src="admin/<?= $blog_article['image']; ?>" />
             <?php
             }
