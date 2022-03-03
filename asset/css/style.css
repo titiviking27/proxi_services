@@ -65,10 +65,10 @@ label {
   border: 2px solid rgb(28, 110, 164);
   display: inline-block;
 }
-#middle {
+/* #middle {
   background: url("../img/logo-work.jpg");
   background-repeat: no-repeat;
-}
+} */
 .error {
   color: red;
   font-size: 15px;
@@ -89,6 +89,7 @@ label {
 .entete {
   display: flex;
   border-style: solid;
+  border-radius: 5px;
 }
 
 .entete img {
@@ -108,6 +109,7 @@ label {
 .contenu {
     flex-flow: row wrap;
     border-style: solid;
+    border-radius: 5px;
 }
 .contact ul li a {
   background: url("../img/social-icons.png") no-repeat;
@@ -202,6 +204,7 @@ label {
 }
 #title h1 {
     border-style: solid;
+    border-radius: 5px;
 }
 .hr-text {
   line-height: 1em;
@@ -231,4 +234,9 @@ label {
   top: 50%;
   width: 100%;
   height: 2px;
+}
+.socialnetwork {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
