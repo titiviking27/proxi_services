@@ -31,6 +31,7 @@ include('inc/header.php'); ?>
             <p>Contenu : <?= $blog_article['content']; ?></p>            
             <p>Pseudo : <?= $blog_article['pseudo']; ?></p>
             <?php
+            //  Affichage de l'image si image dans l'article
             if (!empty($blog_article['image'])) { ?>
                 <img src="admin/<?= $blog_article['image']; ?>"/>
             <?php
